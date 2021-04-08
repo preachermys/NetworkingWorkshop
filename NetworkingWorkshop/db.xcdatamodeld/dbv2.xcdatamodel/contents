@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17505" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AnswerEntity" representedClassName="AnswerEntity" syncable="YES">
+        <attribute name="correct" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="explanation" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="images" optional="YES" attributeType="Transformable"/>
+        <attribute name="step" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="QuestionEntity" inverseName="answers" inverseEntity="QuestionEntity"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="AudioCardEntity" representedClassName="AudioCardEntity" parentEntity="CardEntity" syncable="YES">
+        <attribute name="duration" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="fileUrl" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="AuthorEntity" representedClassName="AuthorEntity" syncable="YES">
+        <attribute name="firstname" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="lastname" optional="YES" attributeType="String"/>
+        <attribute name="middlename" optional="YES" attributeType="String"/>
+        <relationship name="comment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CommentEntity"/>
+    </entity>
+    <entity name="CardEntity" representedClassName="CardEntity" isAbstract="YES" syncable="YES">
+        <attribute name="descr" optional="YES" attributeType="String"/>
+        <attribute name="favoriteCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="favorites" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="favoritesCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="images" optional="YES" attributeType="Transformable"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String"/>
+        <attribute name="isCommentSend" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isFavorited" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isLiked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isShare" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isShareable" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="likesCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="postId" optional="YES" attributeType="String"/>
+        <attribute name="published" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="referralSharesCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="tags" optional="YES" attributeType="String"/>
+        <attribute name="taskId" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="feedBack" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="FeedBackEntity" inverseName="card" inverseEntity="FeedBackEntity"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CardlessTasksEntity" representedClassName="CardlessTasksEntity" syncable="YES">
+        <attribute name="completedCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="inProgressCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="overdueCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="CaseCardEntity" representedClassName="CaseCardEntity" parentEntity="CardEntity" syncable="YES">
+        <attribute name="isWithComments" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="blocks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LongReadBlockEntity" inverseName="caseEntity" inverseEntity="LongReadBlockEntity"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="QuestionEntity" inverseName="caseCard" inverseEntity="QuestionEntity"/>
+    </entity>
+    <entity name="CommentEntity" representedClassName="CommentEntity" syncable="YES">
+        <attribute name="authorFirstName" optional="YES" attributeType="String"/>
+        <attribute name="authorId" optional="YES" attributeType="String"/>
+        <attribute name="authorImages" optional="YES" attributeType="Transformable"/>
+        <attribute name="authorLastName" optional="YES" attributeType="String"/>
+        <attribute name="authorMiddleName" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="entityId" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="isSentToServer" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="parentId" optional="YES" attributeType="String"/>
+        <attribute name="postId" optional="YES" attributeType="String"/>
+        <attribute name="taskId" optional="YES" attributeType="String"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <attribute name="trainingId" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="DuelEntity" representedClassName="DuelEntity" parentEntity="CardEntity" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="hasBlock" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="publishedAt" optional="YES" attributeType="String"/>
+        <attribute name="timeLimit" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="QuestionEntity" inverseName="duel" inverseEntity="QuestionEntity"/>
+    </entity>
+    <entity name="FavoriteEntity" representedClassName="FavoriteEntity" syncable="YES">
+        <attribute name="cardId" optional="YES" attributeType="String"/>
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="entityId" optional="YES" attributeType="String"/>
+        <attribute name="favoritesCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="likesCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="entityId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="FeedBackEntity" representedClassName="FeedBackEntity" syncable="YES">
+        <attribute name="id" attributeType="String"/>
+        <attribute name="question" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="card" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CardEntity" inverseName="feedBack" inverseEntity="CardEntity"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="IdEntity" representedClassName="IdEntity" syncable="YES">
+        <attribute name="elementId" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="position" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrainingCategoryEntity" inverseName="trainingsIds" inverseEntity="TrainingCategoryEntity"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="LocalizedTextEntity" representedClassName="LocalizedTextEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="en" optional="YES" attributeType="String"/>
+        <attribute name="ru" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="LongReadBlockEntity" representedClassName="LongReadBlockEntity" syncable="YES">
+        <attribute name="descr" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="images" optional="YES" attributeType="Transformable"/>
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="caseEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CaseCardEntity" inverseName="blocks" inverseEntity="CaseCardEntity"/>
+        <relationship name="longReadEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LongReadCardEntity" inverseName="blocks" inverseEntity="LongReadCardEntity"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="LongReadCardEntity" representedClassName="LongReadCardEntity" parentEntity="CardEntity" syncable="YES">
+        <relationship name="blocks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LongReadBlockEntity" inverseName="longReadEntity" inverseEntity="LongReadBlockEntity"/>
+    </entity>
+    <entity name="NotificationEntity" representedClassName="NotificationEntity" syncable="YES">
+        <attribute name="descr" optional="YES" attributeType="String"/>
+        <attribute name="entityId" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isAssignee" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="isPublished" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="isSeen" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="namespace" optional="YES" attributeType="String"/>
+        <attribute name="postId" optional="YES" attributeType="String"/>
+        <attribute name="sendAt" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="OpenQuestionEntity" representedClassName="OpenQuestionEntity" parentEntity="CardEntity" syncable="YES">
+        <attribute name="isWithComments" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="PhotoCardEntity" representedClassName="PhotoCardEntity" parentEntity="CardEntity" syncable="YES"/>
+    <entity name="PhotoMarkBlockEntity" representedClassName="PhotoMarkBlockEntity" syncable="YES">
+        <attribute name="descr" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="isSelected" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="x" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="y" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="special" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoMarkSpecialEntity" inverseName="blocks" inverseEntity="PhotoMarkSpecialEntity"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="PhotoMarkCardEntity" representedClassName="PhotoMarkCardEntity" parentEntity="CardEntity" syncable="YES">
+        <relationship name="special" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoMarkSpecialEntity" inverseName="card" inverseEntity="PhotoMarkSpecialEntity"/>
+    </entity>
+    <entity name="PhotoMarkSpecialEntity" representedClassName="PhotoMarkSpecialEntity" syncable="YES">
+        <attribute name="congratulations" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="images" optional="YES" attributeType="Transformable"/>
+        <attribute name="question" optional="YES" attributeType="String"/>
+        <relationship name="blocks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhotoMarkBlockEntity" inverseName="special" inverseEntity="PhotoMarkBlockEntity"/>
+        <relationship name="card" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoMarkCardEntity" inverseName="special" inverseEntity="PhotoMarkCardEntity"/>
+    </entity>
+    <entity name="QuestionEntity" representedClassName="QuestionEntity" syncable="YES">
+        <attribute name="id" attributeType="String"/>
+        <attribute name="question" optional="YES" attributeType="String"/>
+        <attribute name="step" optional="YES" attributeType="Integer 16" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="answers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AnswerEntity" inverseName="question" inverseEntity="AnswerEntity"/>
+        <relationship name="caseCard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CaseCardEntity" inverseName="questions" inverseEntity="CaseCardEntity"/>
+        <relationship name="duel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DuelEntity" inverseName="questions" inverseEntity="DuelEntity"/>
+        <relationship name="testCard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TestCardEntity" inverseName="questions" inverseEntity="TestCardEntity"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="ReportEntity" representedClassName="ReportEntity" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="Binary"/>
+        <attribute name="cardId" optional="YES" attributeType="String"/>
+        <attribute name="duelId" optional="YES" attributeType="String"/>
+        <attribute name="event" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="isSent" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="namespace" optional="YES" attributeType="String"/>
+        <attribute name="postId" optional="YES" attributeType="String"/>
+        <attribute name="taskId" optional="YES" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="trainingId" optional="YES" attributeType="String"/>
+        <attribute name="version" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="SpecialEntity" representedClassName="SpecialEntity" syncable="YES">
+        <attribute name="hasComment" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isCommentPositive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="testAnswer" optional="YES" attributeType="String"/>
+        <relationship name="comment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CommentEntity"/>
+    </entity>
+    <entity name="SurveyEntity" representedClassName="SurveyEntity" parentEntity="CardEntity" syncable="YES">
+        <attribute name="isWithComments" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="starsCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="TaskEntity" representedClassName="TaskEntity" syncable="YES">
+        <attribute name="cardId" optional="YES" attributeType="String"/>
+        <attribute name="completedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="duelId" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isCompleted" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isOverdue" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="trainingId" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="TestCardEntity" representedClassName="TestCardEntity" parentEntity="CardEntity" syncable="YES">
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="QuestionEntity" inverseName="testCard" inverseEntity="QuestionEntity"/>
+    </entity>
+    <entity name="TimeLineBlockEntity" representedClassName="TimeLineBlockEntity" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="descr" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="images" optional="YES" attributeType="Transformable"/>
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="timeLine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TimeLineCardEntity" inverseName="blocks" inverseEntity="TimeLineCardEntity"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="TimeLineCardEntity" representedClassName="TimeLineCardEntity" parentEntity="CardEntity" syncable="YES">
+        <relationship name="blocks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TimeLineBlockEntity" inverseName="timeLine" inverseEntity="TimeLineBlockEntity"/>
+    </entity>
+    <entity name="TrainingCategoryEntity" representedClassName="TrainingCategoryEntity" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isShareable" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="published" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="trainingsIds" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="IdEntity" inverseName="category" inverseEntity="IdEntity"/>
+    </entity>
+    <entity name="TrainingEntity" representedClassName="TrainingEntity" parentEntity="CardEntity" syncable="YES">
+        <attribute name="cardIdsLocal" optional="YES" attributeType="String"/>
+        <attribute name="cardsCompleted" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="estipationTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="progress" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="ratingCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="VideoCardEntity" representedClassName="VideoCardEntity" parentEntity="CardEntity" syncable="YES">
+        <attribute name="fileUrls" optional="YES" attributeType="Transformable"/>
+    </entity>
+    <elements>
+        <element name="AnswerEntity" positionX="-348.1328125" positionY="-409.796875" width="128" height="148"/>
+        <element name="AudioCardEntity" positionX="-47" positionY="-96" width="128" height="28"/>
+        <element name="AuthorEntity" positionX="-537.91015625" positionY="165.68359375" width="128" height="133"/>
+        <element name="CardEntity" positionX="115.84375" positionY="-654.4140625" width="128" height="373"/>
+        <element name="CardlessTasksEntity" positionX="-315" positionY="-108" width="128" height="90"/>
+        <element name="CaseCardEntity" positionX="-324" positionY="-117" width="128" height="88"/>
+        <element name="CommentEntity" positionX="-231.4453125" positionY="162.35546875" width="128" height="253"/>
+        <element name="DuelEntity" positionX="-324" positionY="-117" width="128" height="118"/>
+        <element name="FavoriteEntity" positionX="-324" positionY="-117" width="128" height="135"/>
+        <element name="FeedBackEntity" positionX="-324" positionY="-117" width="128" height="105"/>
+        <element name="IdEntity" positionX="-297" positionY="-90" width="128" height="105"/>
+        <element name="LocalizedTextEntity" positionX="-315" positionY="-108" width="128" height="75"/>
+        <element name="LongReadBlockEntity" positionX="268.55078125" positionY="184.62890625" width="128" height="163"/>
+        <element name="LongReadCardEntity" positionX="-11" positionY="189" width="128" height="60"/>
+        <element name="NotificationEntity" positionX="-324" positionY="-117" width="128" height="208"/>
+        <element name="OpenQuestionEntity" positionX="-315" positionY="-108" width="128" height="58"/>
+        <element name="PhotoCardEntity" positionX="0" positionY="252" width="128" height="45"/>
+        <element name="PhotoMarkBlockEntity" positionX="-315" positionY="-108" width="128" height="150"/>
+        <element name="PhotoMarkCardEntity" positionX="-306" positionY="-99" width="128" height="60"/>
+        <element name="PhotoMarkSpecialEntity" positionX="-324" positionY="-117" width="128" height="133"/>
+        <element name="QuestionEntity" positionX="-522" positionY="-54" width="128" height="165"/>
+        <element name="ReportEntity" positionX="-324" positionY="-117" width="128" height="225"/>
+        <element name="SpecialEntity" positionX="-383.59765625" positionY="126.0390625" width="128" height="105"/>
+        <element name="SurveyEntity" positionX="-529.828125" positionY="-221.19921875" width="128" height="73"/>
+        <element name="TaskEntity" positionX="-306" positionY="-99" width="128" height="180"/>
+        <element name="TestCardEntity" positionX="-259.890625" positionY="-230.80859375" width="128" height="60"/>
+        <element name="TimeLineBlockEntity" positionX="171" positionY="-48" width="128" height="148"/>
+        <element name="TimeLineCardEntity" positionX="-9" positionY="135" width="128" height="60"/>
+        <element name="TrainingCategoryEntity" positionX="229.15234375" positionY="-221.375" width="128" height="133"/>
+        <element name="TrainingEntity" positionX="-250.39453125" positionY="-615.80859375" width="128" height="133"/>
+        <element name="VideoCardEntity" positionX="-29" positionY="18" width="128" height="58"/>
+    </elements>
+</model>
