@@ -76,6 +76,7 @@
                     <navigationItem key="navigationItem" title="Controls" id="5lm-wJ-YHc"/>
                     <connections>
                         <segue destination="H42-2v-qbJ" kind="show" identifier="DuelsWithAlamofire" id="GXK-sr-H4g"/>
+                        <segue destination="Sk2-OD-IOb" kind="show" identifier="FeedWithAlamofire" id="TCz-uG-H4q"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bC-Ft-ffy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -162,6 +163,25 @@
             </objects>
             <point key="canvasLocation" x="486" y="854"/>
         </scene>
+        <!--Feed-->
+        <scene sceneID="xNw-la-VTn">
+            <objects>
+                <tableViewController storyboardIdentifier="FeedViewController" id="Sk2-OD-IOb" customClass="FeedViewController" customModule="NetworkingWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" id="eH8-r4-7Zl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Sk2-OD-IOb" id="RF6-te-Oj6"/>
+                            <outlet property="delegate" destination="Sk2-OD-IOb" id="hSZ-X4-68u"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Feed" id="cgi-7g-auu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VoI-Pf-DtG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2789.8550724637685" y="-542.41071428571422"/>
+        </scene>
         <!--Duels List View Controller-->
         <scene sceneID="FfC-qf-gw9">
             <objects>
@@ -184,15 +204,12 @@
                                                 <constraint firstAttribute="height" constant="200" id="yA3-Ha-ehy"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZD-3f-7l7">
-                                            <rect key="frame" x="20" y="292" width="44" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFI-O3-3EQ" customClass="AttributedLabel" customModule="NetworkingWorkshop" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="266.5" width="374" height="112.5"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUL-Id-8pr">
-                                            <rect key="frame" x="20" y="230" width="374" height="26"/>
+                                            <rect key="frame" x="20" y="230" width="374" height="26.5"/>
                                             <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -209,18 +226,22 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="xFI-O3-3EQ" secondAttribute="trailing" constant="20" id="4Da-YW-i1S"/>
                                         <constraint firstItem="kF7-dS-Mk5" firstAttribute="leading" secondItem="JaS-r1-vgR" secondAttribute="leading" constant="20" id="6gc-oP-dFm"/>
+                                        <constraint firstItem="xFI-O3-3EQ" firstAttribute="top" secondItem="xUL-Id-8pr" secondAttribute="bottom" constant="10" id="Bg6-AA-HOh"/>
                                         <constraint firstItem="kF7-dS-Mk5" firstAttribute="top" secondItem="JaS-r1-vgR" secondAttribute="top" constant="20" id="JiV-2O-xR2"/>
                                         <constraint firstItem="xUL-Id-8pr" firstAttribute="top" secondItem="kF7-dS-Mk5" secondAttribute="bottom" constant="10" id="WV2-GZ-iT8"/>
+                                        <constraint firstAttribute="bottom" secondItem="xFI-O3-3EQ" secondAttribute="bottom" constant="10" id="dp9-lu-bmG"/>
                                         <constraint firstItem="9HX-97-Fxs" firstAttribute="leading" secondItem="JaS-r1-vgR" secondAttribute="leading" constant="20" id="fgf-eO-r24"/>
                                         <constraint firstItem="xUL-Id-8pr" firstAttribute="leading" secondItem="JaS-r1-vgR" secondAttribute="leading" constant="20" id="gLE-BS-tBF"/>
                                         <constraint firstAttribute="trailing" secondItem="xUL-Id-8pr" secondAttribute="trailing" constant="20" id="h5s-iL-U2j"/>
                                         <constraint firstItem="9HX-97-Fxs" firstAttribute="top" secondItem="JaS-r1-vgR" secondAttribute="top" constant="20" id="jMj-g6-luQ"/>
                                         <constraint firstItem="kF7-dS-Mk5" firstAttribute="trailing" secondItem="JaS-r1-vgR" secondAttribute="trailing" constant="-20" id="lOh-Nn-1jl"/>
+                                        <constraint firstItem="xFI-O3-3EQ" firstAttribute="leading" secondItem="JaS-r1-vgR" secondAttribute="leading" constant="20" id="tAP-mN-CHV"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="detailView" destination="mZD-3f-7l7" id="tx4-Ac-kCL"/>
+                                    <outlet property="detailView" destination="xFI-O3-3EQ" id="PIj-dO-bDK"/>
                                     <outlet property="duelLabel" destination="9HX-97-Fxs" id="gA9-Qt-Iyc"/>
                                     <outlet property="mainImage" destination="kF7-dS-Mk5" id="Nnb-PF-Kzx"/>
                                     <outlet property="nameLabel" destination="xUL-Id-8pr" id="Xvy-Fl-sro"/>

@@ -13,6 +13,9 @@
 		32BDC833261BAFA600A90D15 /* DuelGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BDC832261BAFA600A90D15 /* DuelGameModel.swift */; };
 		8419B90E260B206D00EEEE56 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419B90D260B206D00EEEE56 /* MainViewController.swift */; };
 		8419B911260B210100EEEE56 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419B910260B210100EEEE56 /* UserProfileVC.swift */; };
+		841D6C8926202F5300C8C880 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D6C8826202F5300C8C880 /* FeedPresenter.swift */; };
+		841D6C8C26202F7300C8C880 /* FeedConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D6C8B26202F7300C8C880 /* FeedConfigurator.swift */; };
+		841D6C8F26202F8E00C8C880 /* FeedWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D6C8E26202F8E00C8C880 /* FeedWorker.swift */; };
 		841DDC38260A327E0084B463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DDC37260A327E0084B463 /* AppDelegate.swift */; };
 		841DDC3F260A327E0084B463 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841DDC3D260A327E0084B463 /* Main.storyboard */; };
 		841DDC41260A327F0084B463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841DDC40260A327F0084B463 /* Assets.xcassets */; };
@@ -20,6 +23,7 @@
 		841E061C2613631700D3F334 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E061B2613631700D3F334 /* APIConfiguration.swift */; };
 		841E06212613634200D3F334 /* CommonNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E06202613634200D3F334 /* CommonNetworkManager.swift */; };
 		841E06242613635B00D3F334 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E06232613635B00D3F334 /* NetworkConstants.swift */; };
+		841F351A262439610002576E /* FeedOpenQuizTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841F3519262439610002576E /* FeedOpenQuizTVCell.xib */; };
 		842017F526146F4000F75AB1 /* HashPasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842017F426146F4000F75AB1 /* HashPasswordUseCase.swift */; };
 		842017F826146F6900F75AB1 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842017F726146F6900F75AB1 /* GlobalConstants.swift */; };
 		842018002614813600F75AB1 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842017FF2614813600F75AB1 /* KeychainService.swift */; };
@@ -61,6 +65,16 @@
 		8420222C260DC9FA00DB6B69 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420222B260DC9FA00DB6B69 /* SignInViewController.swift */; };
 		8420222F260DCA6C00DB6B69 /* DuelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420222E260DCA6C00DB6B69 /* DuelCell.swift */; };
 		84202232260DCA9300DB6B69 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84202231260DCA9300DB6B69 /* CollectionViewCell.swift */; };
+		8420E121261F46A800DF1685 /* FeedTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420E116261F46A700DF1685 /* FeedTVCell.swift */; };
+		8420E122261F46A800DF1685 /* FeedVideoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420E117261F46A700DF1685 /* FeedVideoTVCell.swift */; };
+		8420E123261F46A800DF1685 /* FeedQuizTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420E118261F46A700DF1685 /* FeedQuizTVCell.swift */; };
+		8420E124261F46A800DF1685 /* FeedQuizTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8420E119261F46A800DF1685 /* FeedQuizTVCell.xib */; };
+		8420E125261F46A800DF1685 /* FeedAudioTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420E11A261F46A800DF1685 /* FeedAudioTVCell.swift */; };
+		8420E126261F46A800DF1685 /* FeedTimeLineTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8420E11B261F46A800DF1685 /* FeedTimeLineTVC.xib */; };
+		8420E127261F46A800DF1685 /* FeedVideoTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8420E11C261F46A800DF1685 /* FeedVideoTVCell.xib */; };
+		8420E128261F46A800DF1685 /* FeedAudioTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8420E11D261F46A800DF1685 /* FeedAudioTVCell.xib */; };
+		8420E129261F46A800DF1685 /* FeedOpenQuizTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420E11E261F46A800DF1685 /* FeedOpenQuizTVCell.swift */; };
+		8420E12A261F46A800DF1685 /* FeedTimeLineTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420E11F261F46A800DF1685 /* FeedTimeLineTVC.swift */; };
 		8421774A261C83FC00646A17 /* UITableView+ReusableSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84217749261C83FC00646A17 /* UITableView+ReusableSupport.swift */; };
 		8421774D261C863E00646A17 /* Duel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421774C261C863E00646A17 /* Duel.swift */; };
 		8422F6E22615AE0C00334582 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422F6E12615AE0C00334582 /* Typealias.swift */; };
@@ -87,6 +101,18 @@
 		842BED77261B66B8005F7D68 /* DuelsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BED76261B66B8005F7D68 /* DuelsListViewController.swift */; };
 		842BED7A261B66E1005F7D68 /* DuelsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BED79261B66E1005F7D68 /* DuelsListPresenter.swift */; };
 		842BED7D261B6702005F7D68 /* DuelsListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BED7C261B6702005F7D68 /* DuelsListConfigurator.swift */; };
+		845AC459262032880032E213 /* FeedSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AC458262032880032E213 /* FeedSceneRouter.swift */; };
+		845AC45C262032D20032E213 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AC45B262032D20032E213 /* FeedViewController.swift */; };
+		845AC45F262056F80032E213 /* UITableView+DataHasChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AC45E262056F80032E213 /* UITableView+DataHasChanged.swift */; };
+		845AC462262069130032E213 /* CellConfiguratorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AC461262069130032E213 /* CellConfiguratorUseCase.swift */; };
+		845AC468262074C60032E213 /* SurveyEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AC467262074C60032E213 /* SurveyEntity+CoreDataClass.swift */; };
+		845AC46B262074DF0032E213 /* SurveyEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AC46A262074DF0032E213 /* SurveyEntity+CoreDataProperties.swift */; };
+		845AC46E262076910032E213 /* OpenQuestionEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AC46D262076910032E213 /* OpenQuestionEntity+CoreDataClass.swift */; };
+		845AC471262076BE0032E213 /* OpenQuestionEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AC470262076BE0032E213 /* OpenQuestionEntity+CoreDataProperties.swift */; };
+		845AC474262077B40032E213 /* CaseCardEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AC473262077B40032E213 /* CaseCardEntity+CoreDataClass.swift */; };
+		845AC477262081930032E213 /* CardsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AC476262081930032E213 /* CardsPresenter.swift */; };
+		84662EC7262486A9003BB815 /* ErrorTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84662EC5262486A9003BB815 /* ErrorTVCell.swift */; };
+		84662EC8262486A9003BB815 /* ErrorTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84662EC6262486A9003BB815 /* ErrorTVCell.xib */; };
 		84741A60261363A9006EEDC3 /* Interceptor+PostRefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84741A5F261363A9006EEDC3 /* Interceptor+PostRefreshToken.swift */; };
 		84741A63261363C7006EEDC3 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84741A62261363C7006EEDC3 /* RequestInterceptor.swift */; };
 		84741A6B26136471006EEDC3 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84741A6A26136471006EEDC3 /* SessionService.swift */; };
@@ -124,6 +150,9 @@
 		32BDC832261BAFA600A90D15 /* DuelGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelGameModel.swift; sourceTree = "<group>"; };
 		8419B90D260B206D00EEEE56 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8419B910260B210100EEEE56 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
+		841D6C8826202F5300C8C880 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		841D6C8B26202F7300C8C880 /* FeedConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedConfigurator.swift; sourceTree = "<group>"; };
+		841D6C8E26202F8E00C8C880 /* FeedWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWorker.swift; sourceTree = "<group>"; };
 		841DDC34260A327E0084B463 /* NetworkingWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841DDC37260A327E0084B463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		841DDC3E260A327E0084B463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,6 +162,7 @@
 		841E061B2613631700D3F334 /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		841E06202613634200D3F334 /* CommonNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNetworkManager.swift; sourceTree = "<group>"; };
 		841E06232613635B00D3F334 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		841F3519262439610002576E /* FeedOpenQuizTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedOpenQuizTVCell.xib; sourceTree = "<group>"; };
 		842017F426146F4000F75AB1 /* HashPasswordUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashPasswordUseCase.swift; sourceTree = "<group>"; };
 		842017F726146F6900F75AB1 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		842017FF2614813600F75AB1 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
@@ -174,6 +204,16 @@
 		8420222B260DC9FA00DB6B69 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		8420222E260DCA6C00DB6B69 /* DuelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelCell.swift; sourceTree = "<group>"; };
 		84202231260DCA9300DB6B69 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		8420E116261F46A700DF1685 /* FeedTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTVCell.swift; sourceTree = "<group>"; };
+		8420E117261F46A700DF1685 /* FeedVideoTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVideoTVCell.swift; sourceTree = "<group>"; };
+		8420E118261F46A700DF1685 /* FeedQuizTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedQuizTVCell.swift; sourceTree = "<group>"; };
+		8420E119261F46A800DF1685 /* FeedQuizTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedQuizTVCell.xib; sourceTree = "<group>"; };
+		8420E11A261F46A800DF1685 /* FeedAudioTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedAudioTVCell.swift; sourceTree = "<group>"; };
+		8420E11B261F46A800DF1685 /* FeedTimeLineTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTimeLineTVC.xib; sourceTree = "<group>"; };
+		8420E11C261F46A800DF1685 /* FeedVideoTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedVideoTVCell.xib; sourceTree = "<group>"; };
+		8420E11D261F46A800DF1685 /* FeedAudioTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedAudioTVCell.xib; sourceTree = "<group>"; };
+		8420E11E261F46A800DF1685 /* FeedOpenQuizTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedOpenQuizTVCell.swift; sourceTree = "<group>"; };
+		8420E11F261F46A800DF1685 /* FeedTimeLineTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTimeLineTVC.swift; sourceTree = "<group>"; };
 		84217749261C83FC00646A17 /* UITableView+ReusableSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReusableSupport.swift"; sourceTree = "<group>"; };
 		8421774C261C863E00646A17 /* Duel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duel.swift; sourceTree = "<group>"; };
 		8422F6E12615AE0C00334582 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
@@ -201,6 +241,18 @@
 		842BED76261B66B8005F7D68 /* DuelsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelsListViewController.swift; sourceTree = "<group>"; };
 		842BED79261B66E1005F7D68 /* DuelsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelsListPresenter.swift; sourceTree = "<group>"; };
 		842BED7C261B6702005F7D68 /* DuelsListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelsListConfigurator.swift; sourceTree = "<group>"; };
+		845AC458262032880032E213 /* FeedSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSceneRouter.swift; sourceTree = "<group>"; };
+		845AC45B262032D20032E213 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		845AC45E262056F80032E213 /* UITableView+DataHasChanged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DataHasChanged.swift"; sourceTree = "<group>"; };
+		845AC461262069130032E213 /* CellConfiguratorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfiguratorUseCase.swift; sourceTree = "<group>"; };
+		845AC467262074C60032E213 /* SurveyEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SurveyEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		845AC46A262074DF0032E213 /* SurveyEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SurveyEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		845AC46D262076910032E213 /* OpenQuestionEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenQuestionEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		845AC470262076BE0032E213 /* OpenQuestionEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenQuestionEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		845AC473262077B40032E213 /* CaseCardEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaseCardEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		845AC476262081930032E213 /* CardsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsPresenter.swift; sourceTree = "<group>"; };
+		84662EC5262486A9003BB815 /* ErrorTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTVCell.swift; sourceTree = "<group>"; };
+		84662EC6262486A9003BB815 /* ErrorTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorTVCell.xib; sourceTree = "<group>"; };
 		84741A5F261363A9006EEDC3 /* Interceptor+PostRefreshToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Interceptor+PostRefreshToken.swift"; sourceTree = "<group>"; };
 		84741A62261363C7006EEDC3 /* RequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInterceptor.swift; sourceTree = "<group>"; };
 		84741A6A26136471006EEDC3 /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
@@ -241,6 +293,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841D6C912620308200C8C880 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				841D6C8826202F5300C8C880 /* FeedPresenter.swift */,
+				841D6C8B26202F7300C8C880 /* FeedConfigurator.swift */,
+				841D6C8E26202F8E00C8C880 /* FeedWorker.swift */,
+				845AC458262032880032E213 /* FeedSceneRouter.swift */,
+				845AC45B262032D20032E213 /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
 		841DDC2B260A327E0084B463 = {
 			isa = PBXGroup;
 			children = (
@@ -266,10 +330,14 @@
 				841DDC37260A327E0084B463 /* AppDelegate.swift */,
 				8419B90D260B206D00EEEE56 /* MainViewController.swift */,
 				84741A6726136410006EEDC3 /* API */,
+				8420E111261F441400DF1685 /* Duel */,
+				8420E113261F445700DF1685 /* Entity */,
 				32BDC82C261BADEE00A90D15 /* LifecyclePresenter.swift */,
 				842BED60261B3ED8005F7D68 /* EmptyCell.swift */,
 				842BED61261B3ED8005F7D68 /* EmptyCell.xib */,
 				842BED6B261B52DC005F7D68 /* UILabel.swift */,
+				845AC461262069130032E213 /* CellConfiguratorUseCase.swift */,
+				845AC476262081930032E213 /* CardsPresenter.swift */,
 				842BED65261B4D24005F7D68 /* ReuseIdentifying.swift */,
 				842BED59261B36B2005F7D68 /* String+Personalized.swift */,
 				842BED68261B512C005F7D68 /* UIImageView+setSuitableImage.swift */,
@@ -278,23 +346,14 @@
 				8420222B260DC9FA00DB6B69 /* SignInViewController.swift */,
 				842017F426146F4000F75AB1 /* HashPasswordUseCase.swift */,
 				842017F726146F6900F75AB1 /* GlobalConstants.swift */,
-				84201807261487D400F75AB1 /* TaskEntity+CoreDataClass.swift */,
-				8422F6F22615DA0500334582 /* TaskEntity+CoreDataProperties.swift */,
-				8420180A261487F100F75AB1 /*  CardEntity+CoreDataClass.swift */,
-				8420186C2614BABB00F75AB1 /* CardEntity+CoreDataProperties.swift */,
-				8422F6E42615CAA000334582 /* CardlessTasksEntity+CoreDataClass.swift */,
-				8422F6E72615CABB00334582 /* CardlessTasksEntity+CoreDataProperties.swift */,
-				842018442614AAC600F75AB1 /* FavoriteEntity+CoreDataClass.swift */,
-				842018722614BB9200F75AB1 /* TimeLineCardEntity+CoreDataClass.swift */,
-				842018752614BBB500F75AB1 /* TimeLineCardEntity+CoreDataProperties.swift */,
 				84217749261C83FC00646A17 /* UITableView+ReusableSupport.swift */,
+				845AC45E262056F80032E213 /* UITableView+DataHasChanged.swift */,
+				845AC467262074C60032E213 /* SurveyEntity+CoreDataClass.swift */,
+				845AC46A262074DF0032E213 /* SurveyEntity+CoreDataProperties.swift */,
+				845AC46D262076910032E213 /* OpenQuestionEntity+CoreDataClass.swift */,
+				845AC470262076BE0032E213 /* OpenQuestionEntity+CoreDataProperties.swift */,
+				845AC473262077B40032E213 /* CaseCardEntity+CoreDataClass.swift */,
 				842018782614BC8E00F75AB1 /* FeedService.swift */,
-				8421774C261C863E00646A17 /* Duel.swift */,
-				8420187E2614BE3400F75AB1 /* DuelsService.swift */,
-				32BDC82F261BAF0F00A90D15 /* DuelsWorker.swift */,
-				32BDC832261BAFA600A90D15 /* DuelGameModel.swift */,
-				842018812614BE5E00F75AB1 /* DuelEntity+CoreDataClass.swift */,
-				842018842614BE7100F75AB1 /* DuelEntity+CoreDataProperties.swift */,
 				8420187B2614BD2700F75AB1 /* PostModel.swift */,
 				842018872614C07500F75AB1 /* CoreDataService.swift */,
 				8420186F2614BAFA00F75AB1 /* MediaFormatService.swift */,
@@ -304,6 +363,7 @@
 				84201813261489BB00F75AB1 /* MyTasksModel.swift */,
 				842018472614AF3A00F75AB1 /* UniversalLinkModel.swift */,
 				842018532614B34400F75AB1 /* FeedType.swift */,
+				841D6C912620308200C8C880 /* Feed */,
 				8420182F2614A50E00F75AB1 /* TeamsModel.swift */,
 				8420183A2614AA1D00F75AB1 /* FavoriteModels.swift */,
 				842018412614AA7D00F75AB1 /* FavoriteType.swift */,
@@ -323,11 +383,8 @@
 				84201829261493C200F75AB1 /* UserService.swift */,
 				842018692614BA3E00F75AB1 /* TrainingService.swift */,
 				8420182C2614942E00F75AB1 /* SessionsListModel.swift */,
-				8420222E260DCA6C00DB6B69 /* DuelCell.swift */,
-				842BED76261B66B8005F7D68 /* DuelsListViewController.swift */,
-				842BED79261B66E1005F7D68 /* DuelsListPresenter.swift */,
-				842BED7C261B6702005F7D68 /* DuelsListConfigurator.swift */,
 				84202231260DCA9300DB6B69 /* CollectionViewCell.swift */,
+				8420E12D261F46BB00DF1685 /* Cells */,
 				841DDC3D260A327E0084B463 /* Main.storyboard */,
 				841DDC40260A327F0084B463 /* Assets.xcassets */,
 				841DDC42260A327F0084B463 /* LaunchScreen.storyboard */,
@@ -335,6 +392,59 @@
 				842BED3A261B00B9005F7D68 /* db.xcdatamodeld */,
 			);
 			path = NetworkingWorkshop;
+			sourceTree = "<group>";
+		};
+		8420E111261F441400DF1685 /* Duel */ = {
+			isa = PBXGroup;
+			children = (
+				8421774C261C863E00646A17 /* Duel.swift */,
+				8420187E2614BE3400F75AB1 /* DuelsService.swift */,
+				32BDC82F261BAF0F00A90D15 /* DuelsWorker.swift */,
+				32BDC832261BAFA600A90D15 /* DuelGameModel.swift */,
+				842018812614BE5E00F75AB1 /* DuelEntity+CoreDataClass.swift */,
+				842018842614BE7100F75AB1 /* DuelEntity+CoreDataProperties.swift */,
+				8420222E260DCA6C00DB6B69 /* DuelCell.swift */,
+				842BED76261B66B8005F7D68 /* DuelsListViewController.swift */,
+				842BED79261B66E1005F7D68 /* DuelsListPresenter.swift */,
+				842BED7C261B6702005F7D68 /* DuelsListConfigurator.swift */,
+			);
+			path = Duel;
+			sourceTree = "<group>";
+		};
+		8420E113261F445700DF1685 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				84201807261487D400F75AB1 /* TaskEntity+CoreDataClass.swift */,
+				8422F6F22615DA0500334582 /* TaskEntity+CoreDataProperties.swift */,
+				8420180A261487F100F75AB1 /*  CardEntity+CoreDataClass.swift */,
+				8420186C2614BABB00F75AB1 /* CardEntity+CoreDataProperties.swift */,
+				8422F6E42615CAA000334582 /* CardlessTasksEntity+CoreDataClass.swift */,
+				8422F6E72615CABB00334582 /* CardlessTasksEntity+CoreDataProperties.swift */,
+				842018442614AAC600F75AB1 /* FavoriteEntity+CoreDataClass.swift */,
+				842018722614BB9200F75AB1 /* TimeLineCardEntity+CoreDataClass.swift */,
+				842018752614BBB500F75AB1 /* TimeLineCardEntity+CoreDataProperties.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		8420E12D261F46BB00DF1685 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84662EC5262486A9003BB815 /* ErrorTVCell.swift */,
+				84662EC6262486A9003BB815 /* ErrorTVCell.xib */,
+				8420E11A261F46A800DF1685 /* FeedAudioTVCell.swift */,
+				8420E11D261F46A800DF1685 /* FeedAudioTVCell.xib */,
+				8420E11E261F46A800DF1685 /* FeedOpenQuizTVCell.swift */,
+				841F3519262439610002576E /* FeedOpenQuizTVCell.xib */,
+				8420E118261F46A700DF1685 /* FeedQuizTVCell.swift */,
+				8420E119261F46A800DF1685 /* FeedQuizTVCell.xib */,
+				8420E11F261F46A800DF1685 /* FeedTimeLineTVC.swift */,
+				8420E11B261F46A800DF1685 /* FeedTimeLineTVC.xib */,
+				8420E116261F46A700DF1685 /* FeedTVCell.swift */,
+				8420E117261F46A700DF1685 /* FeedVideoTVCell.swift */,
+				8420E11C261F46A800DF1685 /* FeedVideoTVCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		842BED47261B307A005F7D68 /* Atributika */ = {
@@ -569,10 +679,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				841DDC44260A327F0084B463 /* LaunchScreen.storyboard in Resources */,
+				8420E127261F46A800DF1685 /* FeedVideoTVCell.xib in Resources */,
 				842BED63261B3ED8005F7D68 /* EmptyCell.xib in Resources */,
+				8420E128261F46A800DF1685 /* FeedAudioTVCell.xib in Resources */,
+				8420E124261F46A800DF1685 /* FeedQuizTVCell.xib in Resources */,
 				842BED53261B307A005F7D68 /* html_specials.plist in Resources */,
 				841DDC41260A327F0084B463 /* Assets.xcassets in Resources */,
+				84662EC8262486A9003BB815 /* ErrorTVCell.xib in Resources */,
 				841DDC3F260A327E0084B463 /* Main.storyboard in Resources */,
+				841F351A262439610002576E /* FeedOpenQuizTVCell.xib in Resources */,
+				8420E126261F46A800DF1685 /* FeedTimeLineTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,7 +743,9 @@
 			files = (
 				842BED52261B307A005F7D68 /* HTMLSpecials.swift in Sources */,
 				84741A9D2613696E006EEDC3 /* UserRouter.swift in Sources */,
+				845AC462262069130032E213 /* CellConfiguratorUseCase.swift in Sources */,
 				84741AAD26136B77006EEDC3 /* FavoritesRouter.swift in Sources */,
+				845AC477262081930032E213 /* CardsPresenter.swift in Sources */,
 				8422F6F32615DA0500334582 /* TaskEntity+CoreDataProperties.swift in Sources */,
 				842018762614BBB500F75AB1 /* TimeLineCardEntity+CoreDataProperties.swift in Sources */,
 				842018572614B38000F75AB1 /* IdEntity+CoreDataClass.swift in Sources */,
@@ -639,6 +757,7 @@
 				8420188B2614C2F800F75AB1 /* FavoritesService.swift in Sources */,
 				8420184B2614AFF500F75AB1 /* TrainingCategoryEntity+CoreDataProperties.swift in Sources */,
 				842018482614AF3A00F75AB1 /* UniversalLinkModel.swift in Sources */,
+				845AC474262077B40032E213 /* CaseCardEntity+CoreDataClass.swift in Sources */,
 				8420186D2614BABB00F75AB1 /* CardEntity+CoreDataProperties.swift in Sources */,
 				84741A84261365EE006EEDC3 /* CookiesError.swift in Sources */,
 				8420183B2614AA1D00F75AB1 /* FavoriteModels.swift in Sources */,
@@ -649,9 +768,14 @@
 				841E06212613634200D3F334 /* CommonNetworkManager.swift in Sources */,
 				84741AA926136B5C006EEDC3 /* FavoritesManager.swift in Sources */,
 				842018272614914E00F75AB1 /* LogoutService.swift in Sources */,
+				841D6C8F26202F8E00C8C880 /* FeedWorker.swift in Sources */,
+				845AC45C262032D20032E213 /* FeedViewController.swift in Sources */,
+				8420E121261F46A800DF1685 /* FeedTVCell.swift in Sources */,
 				32BDC82D261BADEE00A90D15 /* LifecyclePresenter.swift in Sources */,
 				84741A99261368EC006EEDC3 /* UserManager.swift in Sources */,
 				842018822614BE5E00F75AB1 /* DuelEntity+CoreDataClass.swift in Sources */,
+				84662EC7262486A9003BB815 /* ErrorTVCell.swift in Sources */,
+				841D6C8C26202F7300C8C880 /* FeedConfigurator.swift in Sources */,
 				84741AA526136AB5006EEDC3 /* UniversallinkRouter.swift in Sources */,
 				8425E7AD2611CACB00797C87 /* NetworkManager.swift in Sources */,
 				84741A8A26136619006EEDC3 /* ErrorReason.swift in Sources */,
@@ -664,10 +788,13 @@
 				84741A63261363C7006EEDC3 /* RequestInterceptor.swift in Sources */,
 				84741AA126136A6B006EEDC3 /* UniversallinkManager.swift in Sources */,
 				842018852614BE7100F75AB1 /* DuelEntity+CoreDataProperties.swift in Sources */,
+				8420E125261F46A800DF1685 /* FeedAudioTVCell.swift in Sources */,
 				8422F6E22615AE0C00334582 /* Typealias.swift in Sources */,
+				8420E12A261F46A800DF1685 /* FeedTimeLineTVC.swift in Sources */,
 				842018112614898800F75AB1 /* CoreDataStack.swift in Sources */,
 				842BED50261B307A005F7D68 /* AttributedText.swift in Sources */,
 				8420187C2614BD2700F75AB1 /* PostModel.swift in Sources */,
+				845AC468262074C60032E213 /* SurveyEntity+CoreDataClass.swift in Sources */,
 				84741A702613652B006EEDC3 /* AuthRouter.swift in Sources */,
 				842BED57261B307A005F7D68 /* String+Detection.swift in Sources */,
 				841DDC38260A327E0084B463 /* AppDelegate.swift in Sources */,
@@ -681,24 +808,29 @@
 				84741ACD26137139006EEDC3 /* TasksRouter.swift in Sources */,
 				84741AB526136BC3006EEDC3 /* FeedRouter.swift in Sources */,
 				842BED54261B307A005F7D68 /* Style.swift in Sources */,
+				8420E122261F46A800DF1685 /* FeedVideoTVCell.swift in Sources */,
 				8420184E2614B00800F75AB1 /* TrainingCategoryEntity+CoreDataClass.swift in Sources */,
 				842BED51261B307A005F7D68 /* NSScanner+Swift.swift in Sources */,
 				841E061C2613631700D3F334 /* APIConfiguration.swift in Sources */,
 				8420222F260DCA6C00DB6B69 /* DuelCell.swift in Sources */,
 				84741AB126136BAF006EEDC3 /* FeedManager.swift in Sources */,
+				845AC46B262074DF0032E213 /* SurveyEntity+CoreDataProperties.swift in Sources */,
 				842BED3D261B00B9005F7D68 /* db.xcdatamodeld in Sources */,
 				842018672614B93F00F75AB1 /* Date.swift in Sources */,
 				8422F6E82615CABB00334582 /* CardlessTasksEntity+CoreDataProperties.swift in Sources */,
+				845AC46E262076910032E213 /* OpenQuestionEntity+CoreDataClass.swift in Sources */,
 				842018002614813600F75AB1 /* KeychainService.swift in Sources */,
 				84741A91261366AD006EEDC3 /* DuelsManager.swift in Sources */,
 				8420186A2614BA3E00F75AB1 /* TrainingService.swift in Sources */,
 				842018602614B3FF00F75AB1 /* TrainingEntity+CoreDataProperties.swift in Sources */,
 				842BED7A261B66E1005F7D68 /* DuelsListPresenter.swift in Sources */,
 				8420222C260DC9FA00DB6B69 /* SignInViewController.swift in Sources */,
+				8420E123261F46A800DF1685 /* FeedQuizTVCell.swift in Sources */,
 				84741A8D2613662C006EEDC3 /* PushTokenError.swift in Sources */,
 				842BED5A261B36B2005F7D68 /* String+Personalized.swift in Sources */,
 				32BDC830261BAF0F00A90D15 /* DuelsWorker.swift in Sources */,
 				842017F826146F6900F75AB1 /* GlobalConstants.swift in Sources */,
+				8420E129261F46A800DF1685 /* FeedOpenQuizTVCell.swift in Sources */,
 				84741AC926137124006EEDC3 /* TasksManager.swift in Sources */,
 				842BED77261B66B8005F7D68 /* DuelsListViewController.swift in Sources */,
 				84741A7826136581006EEDC3 /* Redirector.swift in Sources */,
@@ -720,10 +852,14 @@
 				84741A81261365DD006EEDC3 /* AuthErrorReason.swift in Sources */,
 				8421774A261C83FC00646A17 /* UITableView+ReusableSupport.swift in Sources */,
 				84741A8726136600006EEDC3 /* ErrorCodes.swift in Sources */,
+				841D6C8926202F5300C8C880 /* FeedPresenter.swift in Sources */,
 				842018792614BC8E00F75AB1 /* FeedService.swift in Sources */,
 				84741A6B26136471006EEDC3 /* SessionService.swift in Sources */,
 				32BDC833261BAFA600A90D15 /* DuelGameModel.swift in Sources */,
+				845AC459262032880032E213 /* FeedSceneRouter.swift in Sources */,
+				845AC471262076BE0032E213 /* OpenQuestionEntity+CoreDataProperties.swift in Sources */,
 				8419B90E260B206D00EEEE56 /* MainViewController.swift in Sources */,
+				845AC45F262056F80032E213 /* UITableView+DataHasChanged.swift in Sources */,
 				841E06242613635B00D3F334 /* NetworkConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

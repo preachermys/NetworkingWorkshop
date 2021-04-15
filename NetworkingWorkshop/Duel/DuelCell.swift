@@ -30,9 +30,9 @@ class DuelCell: UITableViewCell, ReuseIdentifying {
         
         let text = (duel.descr ?? "").personalize.convertFromHTML()
         
-//        detailView.attributedText = text.style(tags: link)
-//        
-//        detailView.truncatedText(cardText: (duel.descr ?? "").personalize)
+        detailView.attributedText = text.style(tags: link)
+        
+        detailView.truncatedText(cardText: (duel.descr ?? "").personalize)
         
         self.cellIndex = cellIndex
         

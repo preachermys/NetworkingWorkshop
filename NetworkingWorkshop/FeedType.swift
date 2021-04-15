@@ -8,7 +8,7 @@
 import Foundation
 
 enum FeedType: String {
-    case timeline = "timeline_Big"
+    case timeline = "ТАЙМЛАЙН"
     case test = "ТЕСТ"
     case survey = "ОПРОС"
     case photo = "ФОТО"

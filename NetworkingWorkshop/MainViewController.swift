@@ -123,7 +123,7 @@ class MainViewController: UICollectionViewController {
         case .duelsAlamofire:
             performSegue(withIdentifier: "DuelsWithAlamofire", sender: self)
         case .feedAlamofire:
-            performSegue(withIdentifier: "PutRequest", sender: self)
+            performSegue(withIdentifier: "FeedWithAlamofire", sender: self)
         case .favoritesAlamofire:
 //            AlamofireNetworkRequest.uploadImage(url: uploadImage)
             performSegue(withIdentifier: "OurCourses", sender: self)
