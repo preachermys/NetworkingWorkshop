@@ -32,6 +32,13 @@ extension TrainingEntity {
     
     var markCount: Int {
         var mark = 0
+        
+//        reports
+//            .sorted(by: { $0.timestamp! > $1.timestamp! })
+//            .forEach({ if let body = $0.body, let grade = body["grade"] as? Int {
+//                mark = grade
+//                }
+//            })
         return mark
     }
     
@@ -44,6 +51,9 @@ extension TrainingEntity {
         }
 
         estipationTime = (dict["estimation_time"] as? Int16) ?? 0
+
+        super.updateFromDict(dict: dict)
+        type = "training"
         self.cardIdsLocal = ""
         if let cardsArray = dict["cards"] as? [[String: String]] {
             for tr in cardsArray {
@@ -54,4 +64,5 @@ extension TrainingEntity {
         }
     }
 }
+
 

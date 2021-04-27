@@ -119,14 +119,13 @@ class MainViewController: UICollectionViewController {
             showAlert()
 //            dataProvider.startDownload()
         case .exercisesAlamofire:
-            performSegue(withIdentifier: "OurCoursesWithAlamofire", sender: self)
+            performSegue(withIdentifier: "ExercisesWithAlamofire", sender: self)
         case .duelsAlamofire:
             performSegue(withIdentifier: "DuelsWithAlamofire", sender: self)
         case .feedAlamofire:
             performSegue(withIdentifier: "FeedWithAlamofire", sender: self)
         case .favoritesAlamofire:
-//            AlamofireNetworkRequest.uploadImage(url: uploadImage)
-            performSegue(withIdentifier: "OurCourses", sender: self)
+            performSegue(withIdentifier: "FavoritesWithAlamofire", sender: self)
         }
     }
     

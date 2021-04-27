@@ -65,8 +65,22 @@ final class CellConfiguratorUseCaseImplementation: CellConfiguratorUseCase {
             cell.taskEntity = presenter.taskEntity(for: cellIndex)
             cell.prepareView(cardModel: card,
                              cellIndex: cellIndex)
+        } else if let cell = cell as? TrainingSectionTVCell {
+            
+            cell.reloadDelegate = reloadAdapter
+//            cell.openDelegate = openCardAdapter
+//            cell.shareCompletion = presenter.shareButtonTap
+            cell.taskEntity = presenter.taskEntity(for: cellIndex)
+            cell.prepareView(
+                trainingModel: card as! TrainingEntity,
+                cellIndex: cellIndex
+//                addFavoritesCallback: presenter.favoriteButtonTap,
+//                moreWasTapped: presenter.moreTappedRows.contains(cellIndex)
+//                tapOnLink: presenter.tapOnLink
+            )
             
         }
+
     }
 }
 

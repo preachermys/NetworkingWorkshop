@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Controls-->
+        <!--Main View Controller-->
         <scene sceneID="IAk-1L-CSa">
             <objects>
                 <collectionViewController id="i7N-Qy-nWa" customClass="MainViewController" customModule="NetworkingWorkshop" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,15 +73,46 @@
                             <outlet property="delegate" destination="i7N-Qy-nWa" id="lPK-nA-CKS"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Controls" id="5lm-wJ-YHc"/>
+                    <navigationItem key="navigationItem" id="5lm-wJ-YHc"/>
                     <connections>
                         <segue destination="H42-2v-qbJ" kind="show" identifier="DuelsWithAlamofire" id="GXK-sr-H4g"/>
                         <segue destination="Sk2-OD-IOb" kind="show" identifier="FeedWithAlamofire" id="TCz-uG-H4q"/>
+                        <segue destination="4ss-sV-fV0" kind="show" identifier="ExercisesWithAlamofire" id="zJI-EG-mQO"/>
+                        <segue destination="SZR-Ll-Di5" kind="show" identifier="FavoritesWithAlamofire" id="ZDt-VD-KmP"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bC-Ft-ffy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1980" y="116"/>
+        </scene>
+        <!--Избранное-->
+        <scene sceneID="ksW-g1-Dxg">
+            <objects>
+                <tableViewController storyboardIdentifier="FavoritesViewController" id="SZR-Ll-Di5" customClass="FavoritesViewController" customModule="NetworkingWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9oW-MW-zfl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CnU-b6-CAF">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CnU-b6-CAF" id="o9h-X0-Jo1">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SZR-Ll-Di5" id="Sok-83-w2n"/>
+                            <outlet property="delegate" destination="SZR-Ll-Di5" id="7S5-sb-no0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Избранное" id="Pt3-za-Exz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MiS-rs-c0D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980" y="854"/>
         </scene>
         <!--Controls-->
         <scene sceneID="8OB-aX-CJa">
@@ -163,7 +194,26 @@
             </objects>
             <point key="canvasLocation" x="486" y="854"/>
         </scene>
-        <!--Feed-->
+        <!--Тренировки-->
+        <scene sceneID="PMN-DM-O7B">
+            <objects>
+                <tableViewController storyboardIdentifier="TrainingsListViewController" id="4ss-sV-fV0" customClass="TrainingsListViewController" customModule="NetworkingWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hyB-SM-CRF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="4ss-sV-fV0" id="QUe-JC-hpk"/>
+                            <outlet property="delegate" destination="4ss-sV-fV0" id="nLV-DH-x7c"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Тренировки" id="CNU-bq-z88"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lr3-X4-bKL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980" y="-565"/>
+        </scene>
+        <!--Лента-->
         <scene sceneID="xNw-la-VTn">
             <objects>
                 <tableViewController storyboardIdentifier="FeedViewController" id="Sk2-OD-IOb" customClass="FeedViewController" customModule="NetworkingWorkshop" customModuleProvider="target" sceneMemberID="viewController">
@@ -176,13 +226,13 @@
                             <outlet property="delegate" destination="Sk2-OD-IOb" id="hSZ-X4-68u"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Feed" id="cgi-7g-auu"/>
+                    <navigationItem key="navigationItem" title="Лента" id="cgi-7g-auu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VoI-Pf-DtG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2789.8550724637685" y="-542.41071428571422"/>
         </scene>
-        <!--Duels List View Controller-->
+        <!--Дуэли-->
         <scene sceneID="FfC-qf-gw9">
             <objects>
                 <tableViewController storyboardIdentifier="DuelsListViewController" id="H42-2v-qbJ" customClass="DuelsListViewController" customModule="NetworkingWorkshop" customModuleProvider="target" sceneMemberID="viewController">
@@ -205,11 +255,11 @@
                                             </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFI-O3-3EQ" customClass="AttributedLabel" customModule="NetworkingWorkshop" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="266.5" width="374" height="112.5"/>
+                                            <rect key="frame" x="20" y="266" width="374" height="113"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUL-Id-8pr">
-                                            <rect key="frame" x="20" y="230" width="374" height="26.5"/>
+                                            <rect key="frame" x="20" y="230" width="374" height="26"/>
                                             <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -253,7 +303,7 @@
                             <outlet property="delegate" destination="H42-2v-qbJ" id="dxQ-iZ-bDM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="npO-X2-u3j"/>
+                    <navigationItem key="navigationItem" title="Дуэли" id="npO-X2-u3j"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAi-J5-BsS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

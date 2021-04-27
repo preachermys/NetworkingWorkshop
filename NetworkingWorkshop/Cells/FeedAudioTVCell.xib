@@ -166,13 +166,6 @@
                                     <constraint firstItem="Ekv-Jj-ONK" firstAttribute="top" secondItem="LCd-EK-Hin" secondAttribute="top" id="v1Q-V1-Wfi"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-TC-eKS" customClass="TaskProgressView" customModule="NetworkingWorkshop" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="140" width="245" height="64"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="5WZ-dv-SrC"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jef-uf-E2g" customClass="AttributedLabel" customModule="NetworkingWorkshop" customModuleProvider="target">
                                 <rect key="frame" x="20" y="387" width="205" height="119"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -224,12 +217,9 @@
                             <constraint firstAttribute="trailing" secondItem="4In-U9-Mdg" secondAttribute="trailing" id="cWV-qX-XBo"/>
                             <constraint firstAttribute="trailing" secondItem="LCd-EK-Hin" secondAttribute="trailing" constant="20" id="dJt-uV-x1J"/>
                             <constraint firstItem="jef-uf-E2g" firstAttribute="top" secondItem="iPf-ct-qkE" secondAttribute="bottom" constant="10" id="dlo-RF-V0H"/>
-                            <constraint firstItem="rQF-TC-eKS" firstAttribute="leading" secondItem="Enr-qc-yCK" secondAttribute="leading" id="mEa-pU-8YM"/>
                             <constraint firstItem="Lr8-Ay-AS2" firstAttribute="top" secondItem="LCd-EK-Hin" secondAttribute="bottom" constant="4" id="mUq-VE-6jN"/>
                             <constraint firstAttribute="trailing" secondItem="prY-LP-A1h" secondAttribute="trailing" constant="20" id="nKq-3R-gtH"/>
                             <constraint firstAttribute="trailing" secondItem="jef-uf-E2g" secondAttribute="trailing" constant="20" id="ofO-G3-Iy4"/>
-                            <constraint firstAttribute="trailing" secondItem="rQF-TC-eKS" secondAttribute="trailing" id="osi-vf-FXY"/>
-                            <constraint firstItem="prY-LP-A1h" firstAttribute="top" secondItem="rQF-TC-eKS" secondAttribute="bottom" constant="10" id="pyr-hg-096"/>
                             <constraint firstItem="iPf-ct-qkE" firstAttribute="top" secondItem="Lr8-Ay-AS2" secondAttribute="bottom" constant="20" id="vVc-d4-2ag"/>
                             <constraint firstItem="HVD-eF-M10" firstAttribute="top" secondItem="Enr-qc-yCK" secondAttribute="top" constant="20" id="w7Z-Tf-r2b"/>
                             <constraint firstItem="qeq-88-z28" firstAttribute="trailing" secondItem="iPf-ct-qkE" secondAttribute="trailing" id="wXp-R9-dnw"/>
@@ -260,6 +250,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="containerView" destination="Enr-qc-yCK" id="xxI-BR-psC"/>
                 <outlet property="detailView" destination="jef-uf-E2g" id="lwA-of-I1K"/>
                 <outlet property="feedTypeLabel" destination="HVD-eF-M10" id="9hC-UT-3js"/>
                 <outlet property="mainImage" destination="4In-U9-Mdg" id="f0z-Px-xsj"/>

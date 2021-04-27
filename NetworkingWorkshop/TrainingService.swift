@@ -21,12 +21,8 @@ class TrainingService {
         privateMOC.persistentStoreCoordinator = CoreDataStack.shared.createPersistentStoreCoordinator()
     }
     
-    func getCategories(page: Int, completion: @escaping ([TrainingCategoryEntity]) -> Void) {
-        trainingManager.getTrainingCategories(page: page, completion: completion)
-    }
-    
-    func getAllCategories(completion: @escaping ([TrainingCategoryEntity]) -> Void) {
-        trainingManager.getAllCategories(completion: completion)
+    func getCategories(page: Int, perPage: Int, completion: @escaping ([TrainingCategoryEntity]) -> Void) {
+        trainingManager.getTrainingCategories(page: page, perPage: perPage, completion: completion)
     }
     
     func getCategory(by id: String, completion: @escaping (TrainingCategoryEntity) -> Void) {
@@ -144,4 +140,3 @@ class TrainingService {
         }
     }
 }
-

@@ -105,7 +105,6 @@ extension DuelsListPresenter {
     }
     
     func numberOfRowsInSection(_ section: Int) -> Int {
-        print("duels count")
         print(worker.duelsCount())
             return worker.duelsCount() == 0 ? 1 : worker.duelsCount()
     }

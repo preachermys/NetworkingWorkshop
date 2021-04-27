@@ -92,13 +92,6 @@
                                     <constraint firstItem="rbU-Um-ZRT" firstAttribute="leading" secondItem="Rh8-cp-yD3" secondAttribute="leading" id="qWf-bk-szT"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hh5-qD-o7I" customClass="TaskProgressView" customModule="NetworkingWorkshop" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="140" width="94" height="64"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="lOF-sA-dJW"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oL7-ai-Y3b" customClass="AttributedLabel" customModule="NetworkingWorkshop" customModuleProvider="target">
                                 <rect key="frame" x="20" y="301.5" width="54" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,7 +103,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iPf-ct-qkE" firstAttribute="top" secondItem="W4O-RW-OCp" secondAttribute="bottom" constant="10" id="0tb-5q-SfQ"/>
-                            <constraint firstItem="hh5-qD-o7I" firstAttribute="leading" secondItem="Enr-qc-yCK" secondAttribute="leading" id="3Oh-os-3ox"/>
                             <constraint firstItem="oL7-ai-Y3b" firstAttribute="trailing" secondItem="iPf-ct-qkE" secondAttribute="trailing" id="5fB-iQ-IEz"/>
                             <constraint firstItem="oL7-ai-Y3b" firstAttribute="top" secondItem="iPf-ct-qkE" secondAttribute="bottom" constant="10" id="8DM-Yq-719"/>
                             <constraint firstItem="iPf-ct-qkE" firstAttribute="leading" secondItem="Enr-qc-yCK" secondAttribute="leading" constant="20" id="EcG-KC-gPw"/>
@@ -126,8 +118,6 @@
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Rh8-cp-yD3" secondAttribute="bottom" constant="15" id="Z8W-zV-pT4"/>
                             <constraint firstAttribute="trailing" secondItem="W4O-RW-OCp" secondAttribute="trailing" constant="20" id="aB6-t7-Mit"/>
                             <constraint firstAttribute="trailing" secondItem="4In-U9-Mdg" secondAttribute="trailing" id="cWV-qX-XBo"/>
-                            <constraint firstItem="hh5-qD-o7I" firstAttribute="bottom" secondItem="4In-U9-Mdg" secondAttribute="bottom" id="lgS-fZ-vd5"/>
-                            <constraint firstAttribute="trailing" secondItem="hh5-qD-o7I" secondAttribute="trailing" id="udA-Xu-0YD"/>
                             <constraint firstItem="Rh8-cp-yD3" firstAttribute="trailing" secondItem="oL7-ai-Y3b" secondAttribute="trailing" id="um2-xl-R5b"/>
                             <constraint firstItem="oL7-ai-Y3b" firstAttribute="leading" secondItem="iPf-ct-qkE" secondAttribute="leading" id="vDf-kz-kN6"/>
                             <constraint firstItem="HVD-eF-M10" firstAttribute="top" secondItem="Enr-qc-yCK" secondAttribute="top" constant="20" id="w7Z-Tf-r2b"/>
@@ -149,6 +139,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="containerView" destination="Enr-qc-yCK" id="s1L-3Z-gRZ"/>
                 <outlet property="detailView" destination="oL7-ai-Y3b" id="1xa-dT-O3r"/>
                 <outlet property="feedTypeLabel" destination="HVD-eF-M10" id="UVf-Sz-1hk"/>
                 <outlet property="mainImage" destination="4In-U9-Mdg" id="SuN-Pc-ROW"/>

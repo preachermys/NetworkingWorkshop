@@ -9,21 +9,20 @@ import Alamofire
 
 enum TrainingRouter: APIConfiguration {
     
-    case getTrainingCategories(userId: String, page: Int)
+    case getTrainingCategories(userId: String, page: Int, perPage: Int)
     case getTrainingsBy(ids: [String])
     case getCategory(userId: String, categoryId: String)
-    case getAllCategories(userId: String)
     
     var method: HTTPMethod {
         switch self {
-        case .getTrainingCategories, .getTrainingsBy, .getCategory, .getAllCategories:
+        case .getTrainingCategories, .getTrainingsBy, .getCategory:
             return .get
         }
     }
     
     var path: String {
         switch self {
-        case .getTrainingCategories(let userId, _), .getAllCategories(let userId):
+        case .getTrainingCategories(let userId, _, _):
             return "v1/users/\(userId)/categories/trainings"
         case .getTrainingsBy:
             return "v1/trainings"
@@ -34,10 +33,10 @@ enum TrainingRouter: APIConfiguration {
     
     var parameters: RequestParams {
         switch self {
-        case .getTrainingCategories(_, let page):
+        case .getTrainingCategories(_, let page, let perPage):
             return .url([
-                "offset": page * 5,
-                "per_page": 5
+                "offset": page * perPage,
+                "per_page": perPage
             ])
         case .getTrainingsBy(let ids):
             return .url([
@@ -46,10 +45,6 @@ enum TrainingRouter: APIConfiguration {
         case .getCategory(_, let categoryId):
             return .url([
                 "filters": ("{\"categoryIds\":[\"" + categoryId + "\"]}").utf8
-            ])
-        case .getAllCategories:
-            return .url([
-                "offset": 0,
             ])
         }
     }

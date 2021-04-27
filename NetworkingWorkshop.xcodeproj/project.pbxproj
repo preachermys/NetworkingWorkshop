@@ -11,6 +11,9 @@
 		32BDC82D261BADEE00A90D15 /* LifecyclePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BDC82C261BADEE00A90D15 /* LifecyclePresenter.swift */; };
 		32BDC830261BAF0F00A90D15 /* DuelsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BDC82F261BAF0F00A90D15 /* DuelsWorker.swift */; };
 		32BDC833261BAFA600A90D15 /* DuelGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BDC832261BAFA600A90D15 /* DuelGameModel.swift */; };
+		32BDC8422628DA9F00A90D15 /* String+CreateURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BDC8412628DA9F00A90D15 /* String+CreateURL.swift */; };
+		32BDC8452628DB1400A90D15 /* String+Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BDC8442628DB1400A90D15 /* String+Plural.swift */; };
+		32BDC8482628DB8F00A90D15 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BDC8472628DB8F00A90D15 /* String+Localized.swift */; };
 		8419B90E260B206D00EEEE56 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419B90D260B206D00EEEE56 /* MainViewController.swift */; };
 		8419B911260B210100EEEE56 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419B910260B210100EEEE56 /* UserProfileVC.swift */; };
 		841D6C8926202F5300C8C880 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D6C8826202F5300C8C880 /* FeedPresenter.swift */; };
@@ -62,6 +65,11 @@
 		842018852614BE7100F75AB1 /* DuelEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842018842614BE7100F75AB1 /* DuelEntity+CoreDataProperties.swift */; };
 		842018882614C07500F75AB1 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842018872614C07500F75AB1 /* CoreDataService.swift */; };
 		8420188B2614C2F800F75AB1 /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420188A2614C2F800F75AB1 /* FavoritesService.swift */; };
+		84201CA7262969C6008E934E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84201CA6262969C6008E934E /* Array.swift */; };
+		84201CAA26296A03008E934E /* Array+Chunked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84201CA926296A03008E934E /* Array+Chunked.swift */; };
+		84201CDA26297017008E934E /* TrainingSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84201CD926297017008E934E /* TrainingSectionHeaderView.swift */; };
+		84201CDD26297422008E934E /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84201CDC26297422008E934E /* GradientLabel.swift */; };
+		84201CE02629B418008E934E /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84201CDF2629B418008E934E /* Array+Safe.swift */; };
 		8420222C260DC9FA00DB6B69 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420222B260DC9FA00DB6B69 /* SignInViewController.swift */; };
 		8420222F260DCA6C00DB6B69 /* DuelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420222E260DCA6C00DB6B69 /* DuelCell.swift */; };
 		84202232260DCA9300DB6B69 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84202231260DCA9300DB6B69 /* CollectionViewCell.swift */; };
@@ -81,6 +89,7 @@
 		8422F6E52615CAA000334582 /* CardlessTasksEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422F6E42615CAA000334582 /* CardlessTasksEntity+CoreDataClass.swift */; };
 		8422F6E82615CABB00334582 /* CardlessTasksEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422F6E72615CABB00334582 /* CardlessTasksEntity+CoreDataProperties.swift */; };
 		8422F6F32615DA0500334582 /* TaskEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422F6F22615DA0500334582 /* TaskEntity+CoreDataProperties.swift */; };
+		842576A8262F11210020BE15 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842576A7262F11210020BE15 /* AppStoryboard.swift */; };
 		8425E7AD2611CACB00797C87 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425E7AC2611CACB00797C87 /* NetworkManager.swift */; };
 		842BED3D261B00B9005F7D68 /* db.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 842BED3A261B00B9005F7D68 /* db.xcdatamodeld */; };
 		842BED50261B307A005F7D68 /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BED48261B307A005F7D68 /* AttributedText.swift */; };
@@ -101,6 +110,19 @@
 		842BED77261B66B8005F7D68 /* DuelsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BED76261B66B8005F7D68 /* DuelsListViewController.swift */; };
 		842BED7A261B66E1005F7D68 /* DuelsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BED79261B66E1005F7D68 /* DuelsListPresenter.swift */; };
 		842BED7D261B6702005F7D68 /* DuelsListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BED7C261B6702005F7D68 /* DuelsListConfigurator.swift */; };
+		845432A6262858FB00C5E3DF /* TrainingsListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845432A5262858FB00C5E3DF /* TrainingsListConfigurator.swift */; };
+		845432AA2628591200C5E3DF /* TrainingsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845432A92628591200C5E3DF /* TrainingsListPresenter.swift */; };
+		845432AD2628592900C5E3DF /* TrainingsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845432AC2628592900C5E3DF /* TrainingsListRouter.swift */; };
+		845432B02628593B00C5E3DF /* TrainingsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845432AF2628593B00C5E3DF /* TrainingsListViewController.swift */; };
+		845432B626285C8E00C5E3DF /* TrainingTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845432B426285C8E00C5E3DF /* TrainingTVCell.swift */; };
+		845432B726285C8E00C5E3DF /* TrainingTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845432B526285C8E00C5E3DF /* TrainingTVCell.xib */; };
+		845432BB26286AE800C5E3DF /* TrainingCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845432B926286AE800C5E3DF /* TrainingCVCell.swift */; };
+		845432BC26286AE800C5E3DF /* TrainingCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845432BA26286AE800C5E3DF /* TrainingCVCell.xib */; };
+		845432EC262879C300C5E3DF /* FavoritesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845432EB262879C300C5E3DF /* FavoritesConfigurator.swift */; };
+		845432EF262879E100C5E3DF /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845432EE262879E100C5E3DF /* FavoritesPresenter.swift */; };
+		845432F2262879FC00C5E3DF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845432F1262879FC00C5E3DF /* FavoritesViewController.swift */; };
+		845432F826287B9A00C5E3DF /* TrainingSectionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845432F626287B9A00C5E3DF /* TrainingSectionTVCell.swift */; };
+		845432F926287B9A00C5E3DF /* TrainingSectionTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845432F726287B9A00C5E3DF /* TrainingSectionTVCell.xib */; };
 		845AC459262032880032E213 /* FeedSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AC458262032880032E213 /* FeedSceneRouter.swift */; };
 		845AC45C262032D20032E213 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AC45B262032D20032E213 /* FeedViewController.swift */; };
 		845AC45F262056F80032E213 /* UITableView+DataHasChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AC45E262056F80032E213 /* UITableView+DataHasChanged.swift */; };
@@ -139,6 +161,7 @@
 		84741ABD26136C1C006EEDC3 /* TrainingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84741ABC26136C1C006EEDC3 /* TrainingRouter.swift */; };
 		84741AC926137124006EEDC3 /* TasksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84741AC826137124006EEDC3 /* TasksManager.swift */; };
 		84741ACD26137139006EEDC3 /* TasksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84741ACC26137139006EEDC3 /* TasksRouter.swift */; };
+		848312C1262F201100165E3F /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 848312C0262F201100165E3F /* Localizable.stringsdict */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +171,9 @@
 		32BDC82C261BADEE00A90D15 /* LifecyclePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecyclePresenter.swift; sourceTree = "<group>"; };
 		32BDC82F261BAF0F00A90D15 /* DuelsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelsWorker.swift; sourceTree = "<group>"; };
 		32BDC832261BAFA600A90D15 /* DuelGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelGameModel.swift; sourceTree = "<group>"; };
+		32BDC8412628DA9F00A90D15 /* String+CreateURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CreateURL.swift"; sourceTree = "<group>"; };
+		32BDC8442628DB1400A90D15 /* String+Plural.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Plural.swift"; sourceTree = "<group>"; };
+		32BDC8472628DB8F00A90D15 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		8419B90D260B206D00EEEE56 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8419B910260B210100EEEE56 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		841D6C8826202F5300C8C880 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
@@ -201,6 +227,11 @@
 		842018842614BE7100F75AB1 /* DuelEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DuelEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		842018872614C07500F75AB1 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		8420188A2614C2F800F75AB1 /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
+		84201CA6262969C6008E934E /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		84201CA926296A03008E934E /* Array+Chunked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Chunked.swift"; sourceTree = "<group>"; };
+		84201CD926297017008E934E /* TrainingSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSectionHeaderView.swift; sourceTree = "<group>"; };
+		84201CDC26297422008E934E /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
+		84201CDF2629B418008E934E /* Array+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
 		8420222B260DC9FA00DB6B69 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		8420222E260DCA6C00DB6B69 /* DuelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelCell.swift; sourceTree = "<group>"; };
 		84202231260DCA9300DB6B69 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -220,6 +251,7 @@
 		8422F6E42615CAA000334582 /* CardlessTasksEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardlessTasksEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8422F6E72615CABB00334582 /* CardlessTasksEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardlessTasksEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8422F6F22615DA0500334582 /* TaskEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		842576A7262F11210020BE15 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 		8425E7AC2611CACB00797C87 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		842BED3B261B00B9005F7D68 /* db.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = db.xcdatamodel; sourceTree = "<group>"; };
 		842BED3C261B00B9005F7D68 /* dbv2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dbv2.xcdatamodel; sourceTree = "<group>"; };
@@ -241,6 +273,19 @@
 		842BED76261B66B8005F7D68 /* DuelsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelsListViewController.swift; sourceTree = "<group>"; };
 		842BED79261B66E1005F7D68 /* DuelsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelsListPresenter.swift; sourceTree = "<group>"; };
 		842BED7C261B6702005F7D68 /* DuelsListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelsListConfigurator.swift; sourceTree = "<group>"; };
+		845432A5262858FB00C5E3DF /* TrainingsListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsListConfigurator.swift; sourceTree = "<group>"; };
+		845432A92628591200C5E3DF /* TrainingsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsListPresenter.swift; sourceTree = "<group>"; };
+		845432AC2628592900C5E3DF /* TrainingsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsListRouter.swift; sourceTree = "<group>"; };
+		845432AF2628593B00C5E3DF /* TrainingsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsListViewController.swift; sourceTree = "<group>"; };
+		845432B426285C8E00C5E3DF /* TrainingTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingTVCell.swift; sourceTree = "<group>"; };
+		845432B526285C8E00C5E3DF /* TrainingTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainingTVCell.xib; sourceTree = "<group>"; };
+		845432B926286AE800C5E3DF /* TrainingCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingCVCell.swift; sourceTree = "<group>"; };
+		845432BA26286AE800C5E3DF /* TrainingCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainingCVCell.xib; sourceTree = "<group>"; };
+		845432EB262879C300C5E3DF /* FavoritesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesConfigurator.swift; sourceTree = "<group>"; };
+		845432EE262879E100C5E3DF /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
+		845432F1262879FC00C5E3DF /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		845432F626287B9A00C5E3DF /* TrainingSectionTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingSectionTVCell.swift; sourceTree = "<group>"; };
+		845432F726287B9A00C5E3DF /* TrainingSectionTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainingSectionTVCell.xib; sourceTree = "<group>"; };
 		845AC458262032880032E213 /* FeedSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSceneRouter.swift; sourceTree = "<group>"; };
 		845AC45B262032D20032E213 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		845AC45E262056F80032E213 /* UITableView+DataHasChanged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DataHasChanged.swift"; sourceTree = "<group>"; };
@@ -279,6 +324,7 @@
 		84741ABC26136C1C006EEDC3 /* TrainingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRouter.swift; sourceTree = "<group>"; };
 		84741AC826137124006EEDC3 /* TasksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksManager.swift; sourceTree = "<group>"; };
 		84741ACC26137139006EEDC3 /* TasksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksRouter.swift; sourceTree = "<group>"; };
+		848312C0262F201100165E3F /* Localizable.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,8 +379,6 @@
 				8420E111261F441400DF1685 /* Duel */,
 				8420E113261F445700DF1685 /* Entity */,
 				32BDC82C261BADEE00A90D15 /* LifecyclePresenter.swift */,
-				842BED60261B3ED8005F7D68 /* EmptyCell.swift */,
-				842BED61261B3ED8005F7D68 /* EmptyCell.xib */,
 				842BED6B261B52DC005F7D68 /* UILabel.swift */,
 				845AC461262069130032E213 /* CellConfiguratorUseCase.swift */,
 				845AC476262081930032E213 /* CardsPresenter.swift */,
@@ -353,6 +397,11 @@
 				845AC46D262076910032E213 /* OpenQuestionEntity+CoreDataClass.swift */,
 				845AC470262076BE0032E213 /* OpenQuestionEntity+CoreDataProperties.swift */,
 				845AC473262077B40032E213 /* CaseCardEntity+CoreDataClass.swift */,
+				32BDC8412628DA9F00A90D15 /* String+CreateURL.swift */,
+				32BDC8442628DB1400A90D15 /* String+Plural.swift */,
+				848312C0262F201100165E3F /* Localizable.stringsdict */,
+				32BDC8472628DB8F00A90D15 /* String+Localized.swift */,
+				842576A7262F11210020BE15 /* AppStoryboard.swift */,
 				842018782614BC8E00F75AB1 /* FeedService.swift */,
 				8420187B2614BD2700F75AB1 /* PostModel.swift */,
 				842018872614C07500F75AB1 /* CoreDataService.swift */,
@@ -363,6 +412,12 @@
 				84201813261489BB00F75AB1 /* MyTasksModel.swift */,
 				842018472614AF3A00F75AB1 /* UniversalLinkModel.swift */,
 				842018532614B34400F75AB1 /* FeedType.swift */,
+				84201CA6262969C6008E934E /* Array.swift */,
+				84201CA926296A03008E934E /* Array+Chunked.swift */,
+				84201CDF2629B418008E934E /* Array+Safe.swift */,
+				84201CD926297017008E934E /* TrainingSectionHeaderView.swift */,
+				84201CDC26297422008E934E /* GradientLabel.swift */,
+				845432B226285C6F00C5E3DF /* Trainings */,
 				841D6C912620308200C8C880 /* Feed */,
 				8420182F2614A50E00F75AB1 /* TeamsModel.swift */,
 				8420183A2614AA1D00F75AB1 /* FavoriteModels.swift */,
@@ -384,6 +439,7 @@
 				842018692614BA3E00F75AB1 /* TrainingService.swift */,
 				8420182C2614942E00F75AB1 /* SessionsListModel.swift */,
 				84202231260DCA9300DB6B69 /* CollectionViewCell.swift */,
+				845432F426287A2700C5E3DF /* Favorites */,
 				8420E12D261F46BB00DF1685 /* Cells */,
 				841DDC3D260A327E0084B463 /* Main.storyboard */,
 				841DDC40260A327F0084B463 /* Assets.xcassets */,
@@ -430,6 +486,8 @@
 		8420E12D261F46BB00DF1685 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				842BED60261B3ED8005F7D68 /* EmptyCell.swift */,
+				842BED61261B3ED8005F7D68 /* EmptyCell.xib */,
 				84662EC5262486A9003BB815 /* ErrorTVCell.swift */,
 				84662EC6262486A9003BB815 /* ErrorTVCell.xib */,
 				8420E11A261F46A800DF1685 /* FeedAudioTVCell.swift */,
@@ -460,6 +518,33 @@
 				842BED4F261B307A005F7D68 /* String+Detection.swift */,
 			);
 			path = Atributika;
+			sourceTree = "<group>";
+		};
+		845432B226285C6F00C5E3DF /* Trainings */ = {
+			isa = PBXGroup;
+			children = (
+				845432F626287B9A00C5E3DF /* TrainingSectionTVCell.swift */,
+				845432F726287B9A00C5E3DF /* TrainingSectionTVCell.xib */,
+				845432B426285C8E00C5E3DF /* TrainingTVCell.swift */,
+				845432B526285C8E00C5E3DF /* TrainingTVCell.xib */,
+				845432B926286AE800C5E3DF /* TrainingCVCell.swift */,
+				845432BA26286AE800C5E3DF /* TrainingCVCell.xib */,
+				845432A5262858FB00C5E3DF /* TrainingsListConfigurator.swift */,
+				845432A92628591200C5E3DF /* TrainingsListPresenter.swift */,
+				845432AC2628592900C5E3DF /* TrainingsListRouter.swift */,
+				845432AF2628593B00C5E3DF /* TrainingsListViewController.swift */,
+			);
+			path = Trainings;
+			sourceTree = "<group>";
+		};
+		845432F426287A2700C5E3DF /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				845432EB262879C300C5E3DF /* FavoritesConfigurator.swift */,
+				845432EE262879E100C5E3DF /* FavoritesPresenter.swift */,
+				845432F1262879FC00C5E3DF /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 		84741A65261363F1006EEDC3 /* RequestInterceptor */ = {
@@ -678,17 +763,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845432BC26286AE800C5E3DF /* TrainingCVCell.xib in Resources */,
 				841DDC44260A327F0084B463 /* LaunchScreen.storyboard in Resources */,
 				8420E127261F46A800DF1685 /* FeedVideoTVCell.xib in Resources */,
 				842BED63261B3ED8005F7D68 /* EmptyCell.xib in Resources */,
 				8420E128261F46A800DF1685 /* FeedAudioTVCell.xib in Resources */,
+				848312C1262F201100165E3F /* Localizable.stringsdict in Resources */,
 				8420E124261F46A800DF1685 /* FeedQuizTVCell.xib in Resources */,
 				842BED53261B307A005F7D68 /* html_specials.plist in Resources */,
 				841DDC41260A327F0084B463 /* Assets.xcassets in Resources */,
 				84662EC8262486A9003BB815 /* ErrorTVCell.xib in Resources */,
 				841DDC3F260A327E0084B463 /* Main.storyboard in Resources */,
+				845432B726285C8E00C5E3DF /* TrainingTVCell.xib in Resources */,
 				841F351A262439610002576E /* FeedOpenQuizTVCell.xib in Resources */,
 				8420E126261F46A800DF1685 /* FeedTimeLineTVC.xib in Resources */,
+				845432F926287B9A00C5E3DF /* TrainingSectionTVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,6 +841,7 @@
 				84202232260DCA9300DB6B69 /* CollectionViewCell.swift in Sources */,
 				84741A95261366C5006EEDC3 /* DuelsRouter.swift in Sources */,
 				842018512614B04F00F75AB1 /* MainThread.swift in Sources */,
+				845432F826287B9A00C5E3DF /* TrainingSectionTVCell.swift in Sources */,
 				8422F6E52615CAA000334582 /* CardlessTasksEntity+CoreDataClass.swift in Sources */,
 				842BED55261B307A005F7D68 /* AttributedLabel.swift in Sources */,
 				8420188B2614C2F800F75AB1 /* FavoritesService.swift in Sources */,
@@ -764,18 +854,21 @@
 				842BED7D261B6702005F7D68 /* DuelsListConfigurator.swift in Sources */,
 				842BED69261B512C005F7D68 /* UIImageView+setSuitableImage.swift in Sources */,
 				8420185D2614B3EC00F75AB1 /* TrainingEntity+CoreDataClass.swift in Sources */,
+				32BDC8452628DB1400A90D15 /* String+Plural.swift in Sources */,
 				8420185A2614B39900F75AB1 /* IdEntity+CoreDataProperties.swift in Sources */,
 				841E06212613634200D3F334 /* CommonNetworkManager.swift in Sources */,
 				84741AA926136B5C006EEDC3 /* FavoritesManager.swift in Sources */,
 				842018272614914E00F75AB1 /* LogoutService.swift in Sources */,
 				841D6C8F26202F8E00C8C880 /* FeedWorker.swift in Sources */,
 				845AC45C262032D20032E213 /* FeedViewController.swift in Sources */,
+				84201CA7262969C6008E934E /* Array.swift in Sources */,
 				8420E121261F46A800DF1685 /* FeedTVCell.swift in Sources */,
 				32BDC82D261BADEE00A90D15 /* LifecyclePresenter.swift in Sources */,
 				84741A99261368EC006EEDC3 /* UserManager.swift in Sources */,
 				842018822614BE5E00F75AB1 /* DuelEntity+CoreDataClass.swift in Sources */,
 				84662EC7262486A9003BB815 /* ErrorTVCell.swift in Sources */,
 				841D6C8C26202F7300C8C880 /* FeedConfigurator.swift in Sources */,
+				84201CDD26297422008E934E /* GradientLabel.swift in Sources */,
 				84741AA526136AB5006EEDC3 /* UniversallinkRouter.swift in Sources */,
 				8425E7AD2611CACB00797C87 /* NetworkManager.swift in Sources */,
 				84741A8A26136619006EEDC3 /* ErrorReason.swift in Sources */,
@@ -788,7 +881,10 @@
 				84741A63261363C7006EEDC3 /* RequestInterceptor.swift in Sources */,
 				84741AA126136A6B006EEDC3 /* UniversallinkManager.swift in Sources */,
 				842018852614BE7100F75AB1 /* DuelEntity+CoreDataProperties.swift in Sources */,
+				845432AD2628592900C5E3DF /* TrainingsListRouter.swift in Sources */,
 				8420E125261F46A800DF1685 /* FeedAudioTVCell.swift in Sources */,
+				845432F2262879FC00C5E3DF /* FavoritesViewController.swift in Sources */,
+				84201CE02629B418008E934E /* Array+Safe.swift in Sources */,
 				8422F6E22615AE0C00334582 /* Typealias.swift in Sources */,
 				8420E12A261F46A800DF1685 /* FeedTimeLineTVC.swift in Sources */,
 				842018112614898800F75AB1 /* CoreDataStack.swift in Sources */,
@@ -807,6 +903,8 @@
 				84741A60261363A9006EEDC3 /* Interceptor+PostRefreshToken.swift in Sources */,
 				84741ACD26137139006EEDC3 /* TasksRouter.swift in Sources */,
 				84741AB526136BC3006EEDC3 /* FeedRouter.swift in Sources */,
+				84201CDA26297017008E934E /* TrainingSectionHeaderView.swift in Sources */,
+				32BDC8422628DA9F00A90D15 /* String+CreateURL.swift in Sources */,
 				842BED54261B307A005F7D68 /* Style.swift in Sources */,
 				8420E122261F46A800DF1685 /* FeedVideoTVCell.swift in Sources */,
 				8420184E2614B00800F75AB1 /* TrainingCategoryEntity+CoreDataClass.swift in Sources */,
@@ -821,21 +919,28 @@
 				845AC46E262076910032E213 /* OpenQuestionEntity+CoreDataClass.swift in Sources */,
 				842018002614813600F75AB1 /* KeychainService.swift in Sources */,
 				84741A91261366AD006EEDC3 /* DuelsManager.swift in Sources */,
+				845432AA2628591200C5E3DF /* TrainingsListPresenter.swift in Sources */,
 				8420186A2614BA3E00F75AB1 /* TrainingService.swift in Sources */,
 				842018602614B3FF00F75AB1 /* TrainingEntity+CoreDataProperties.swift in Sources */,
 				842BED7A261B66E1005F7D68 /* DuelsListPresenter.swift in Sources */,
+				845432EC262879C300C5E3DF /* FavoritesConfigurator.swift in Sources */,
+				845432A6262858FB00C5E3DF /* TrainingsListConfigurator.swift in Sources */,
 				8420222C260DC9FA00DB6B69 /* SignInViewController.swift in Sources */,
 				8420E123261F46A800DF1685 /* FeedQuizTVCell.swift in Sources */,
 				84741A8D2613662C006EEDC3 /* PushTokenError.swift in Sources */,
 				842BED5A261B36B2005F7D68 /* String+Personalized.swift in Sources */,
+				845432B02628593B00C5E3DF /* TrainingsListViewController.swift in Sources */,
 				32BDC830261BAF0F00A90D15 /* DuelsWorker.swift in Sources */,
 				842017F826146F6900F75AB1 /* GlobalConstants.swift in Sources */,
+				845432EF262879E100C5E3DF /* FavoritesPresenter.swift in Sources */,
 				8420E129261F46A800DF1685 /* FeedOpenQuizTVCell.swift in Sources */,
+				845432BB26286AE800C5E3DF /* TrainingCVCell.swift in Sources */,
 				84741AC926137124006EEDC3 /* TasksManager.swift in Sources */,
 				842BED77261B66B8005F7D68 /* DuelsListViewController.swift in Sources */,
 				84741A7826136581006EEDC3 /* Redirector.swift in Sources */,
 				8419B911260B210100EEEE56 /* UserProfileVC.swift in Sources */,
 				8420182D2614942E00F75AB1 /* SessionsListModel.swift in Sources */,
+				84201CAA26296A03008E934E /* Array+Chunked.swift in Sources */,
 				842BED66261B4D24005F7D68 /* ReuseIdentifying.swift in Sources */,
 				8421774D261C863E00646A17 /* Duel.swift in Sources */,
 				84741AB926136C06006EEDC3 /* TrainingManager.swift in Sources */,
@@ -845,6 +950,7 @@
 				842018452614AAC600F75AB1 /* FavoriteEntity+CoreDataClass.swift in Sources */,
 				84741A742613654A006EEDC3 /* AuthorizationManager.swift in Sources */,
 				842018702614BAFA00F75AB1 /* MediaFormatService.swift in Sources */,
+				842576A8262F11210020BE15 /* AppStoryboard.swift in Sources */,
 				842BED74261B54E2005F7D68 /* UIImage.swift in Sources */,
 				8420180E2614882F00F75AB1 /* TasksService.swift in Sources */,
 				842018422614AA7D00F75AB1 /* FavoriteType.swift in Sources */,
@@ -852,6 +958,7 @@
 				84741A81261365DD006EEDC3 /* AuthErrorReason.swift in Sources */,
 				8421774A261C83FC00646A17 /* UITableView+ReusableSupport.swift in Sources */,
 				84741A8726136600006EEDC3 /* ErrorCodes.swift in Sources */,
+				845432B626285C8E00C5E3DF /* TrainingTVCell.swift in Sources */,
 				841D6C8926202F5300C8C880 /* FeedPresenter.swift in Sources */,
 				842018792614BC8E00F75AB1 /* FeedService.swift in Sources */,
 				84741A6B26136471006EEDC3 /* SessionService.swift in Sources */,
@@ -859,6 +966,7 @@
 				845AC459262032880032E213 /* FeedSceneRouter.swift in Sources */,
 				845AC471262076BE0032E213 /* OpenQuestionEntity+CoreDataProperties.swift in Sources */,
 				8419B90E260B206D00EEEE56 /* MainViewController.swift in Sources */,
+				32BDC8482628DB8F00A90D15 /* String+Localized.swift in Sources */,
 				845AC45F262056F80032E213 /* UITableView+DataHasChanged.swift in Sources */,
 				841E06242613635B00D3F334 /* NetworkConstants.swift in Sources */,
 			);

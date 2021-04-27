@@ -11,10 +11,10 @@ final class TrainingManager: CommonNetworkManager {
     
     // MARK: - Get training categories
     
-    func getTrainingCategories(page: Int, completion: @escaping ([TrainingCategoryEntity]) -> Void) {
+    func getTrainingCategories(page: Int, perPage: Int, completion: @escaping ([TrainingCategoryEntity]) -> Void) {
         guard let userId = UserModel.shared.userId else { return }
         
-        let request = TrainingRouter.getTrainingCategories(userId: userId, page: page).asURL()
+        let request = TrainingRouter.getTrainingCategories(userId: userId, page: page, perPage: perPage).asURL()
         
         session.request(request).validate().responseJSON { response in
             
@@ -47,25 +47,6 @@ final class TrainingManager: CommonNetworkManager {
                     completion(CoreDataObjectFabric.createTrainingCategoryEntity(from: category))
                 }
 
-            case .failure: break
-            }
-        }
-    }
-    
-    func getAllCategories(completion: @escaping ([TrainingCategoryEntity]) -> Void) {
-        guard let userId = UserModel.shared.userId else { return }
-        
-        let request = TrainingRouter.getAllCategories(userId: userId).asURL()
-        
-        session.request(request).validate().responseJSON { response in
-            
-            switch response.result {
-            case .success(let data):
-                if let data = data as? [String: Any],
-                    let dataList = data["data"] as? [[String: Any]] {
-                    
-                    completion(dataList.map { CoreDataObjectFabric.createTrainingCategoryEntity(from: $0) })
-                }
             case .failure: break
             }
         }

@@ -101,13 +101,6 @@
                                     <constraint firstAttribute="height" constant="46" id="jg4-Zg-Mfz"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nJ-5i-3uq" customClass="TaskProgressView" customModule="NetworkingWorkshop" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="140" width="157.66666666666666" height="64"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="xkQ-m6-lha"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mth-1A-SKt" customClass="AttributedLabel" customModule="NetworkingWorkshop" customModuleProvider="target">
                                 <rect key="frame" x="20.000000000000007" y="305.66666666666669" width="117.66666666666669" height="99.333333333333314"/>
                                 <constraints>
@@ -121,12 +114,10 @@
                             <constraint firstItem="iPf-ct-qkE" firstAttribute="top" secondItem="caQ-dZ-Lzq" secondAttribute="bottom" constant="10" id="C2G-Hi-Iik"/>
                             <constraint firstItem="iPf-ct-qkE" firstAttribute="leading" secondItem="Enr-qc-yCK" secondAttribute="leading" constant="20" id="EcG-KC-gPw"/>
                             <constraint firstItem="3H6-5t-O2e" firstAttribute="trailing" secondItem="Mth-1A-SKt" secondAttribute="trailing" id="I1k-rZ-kHK"/>
-                            <constraint firstAttribute="trailing" secondItem="4nJ-5i-3uq" secondAttribute="trailing" id="Ie7-cd-5ET"/>
                             <constraint firstAttribute="trailing" secondItem="iPf-ct-qkE" secondAttribute="trailing" constant="20" id="MFg-CO-JA0"/>
                             <constraint firstItem="Mth-1A-SKt" firstAttribute="top" secondItem="iPf-ct-qkE" secondAttribute="bottom" constant="10" id="MIm-7m-kaa"/>
                             <constraint firstItem="4In-U9-Mdg" firstAttribute="leading" secondItem="Enr-qc-yCK" secondAttribute="leading" id="N0a-nW-EFg"/>
                             <constraint firstItem="HVD-eF-M10" firstAttribute="leading" secondItem="Enr-qc-yCK" secondAttribute="leading" constant="20" id="NoF-5Z-bMQ"/>
-                            <constraint firstItem="4nJ-5i-3uq" firstAttribute="leading" secondItem="Enr-qc-yCK" secondAttribute="leading" id="R5A-if-aAL"/>
                             <constraint firstItem="Mth-1A-SKt" firstAttribute="trailing" secondItem="iPf-ct-qkE" secondAttribute="trailing" id="Rdf-x1-kG7"/>
                             <constraint firstItem="DBL-gi-BSu" firstAttribute="top" secondItem="Enr-qc-yCK" secondAttribute="top" constant="30" id="S5f-lo-E8f"/>
                             <constraint firstItem="caQ-dZ-Lzq" firstAttribute="leading" secondItem="Enr-qc-yCK" secondAttribute="leading" constant="20" id="V8g-5S-9wd"/>
@@ -135,7 +126,6 @@
                             <constraint firstItem="3H6-5t-O2e" firstAttribute="leading" secondItem="Mth-1A-SKt" secondAttribute="leading" id="Xgb-pf-Hll"/>
                             <constraint firstItem="Mth-1A-SKt" firstAttribute="leading" secondItem="iPf-ct-qkE" secondAttribute="leading" id="cUS-cu-pVE"/>
                             <constraint firstAttribute="trailing" secondItem="4In-U9-Mdg" secondAttribute="trailing" id="cWV-qX-XBo"/>
-                            <constraint firstItem="4nJ-5i-3uq" firstAttribute="bottom" secondItem="4In-U9-Mdg" secondAttribute="bottom" id="f2e-L4-sx0"/>
                             <constraint firstItem="3H6-5t-O2e" firstAttribute="top" secondItem="Mth-1A-SKt" secondAttribute="bottom" constant="10" id="w4M-TM-8ky"/>
                             <constraint firstItem="HVD-eF-M10" firstAttribute="top" secondItem="Enr-qc-yCK" secondAttribute="top" constant="20" id="w7Z-Tf-r2b"/>
                             <constraint firstAttribute="trailing" secondItem="DBL-gi-BSu" secondAttribute="trailing" constant="20" id="wXV-Qs-Uff"/>
@@ -157,6 +147,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="containerView" destination="Enr-qc-yCK" id="Ze3-cd-C38"/>
                 <outlet property="detailView" destination="Mth-1A-SKt" id="VWb-kX-08v"/>
                 <outlet property="feedTypeLabel" destination="HVD-eF-M10" id="SI9-nK-uHJ"/>
                 <outlet property="mainImage" destination="4In-U9-Mdg" id="o8B-Jz-dIX"/>

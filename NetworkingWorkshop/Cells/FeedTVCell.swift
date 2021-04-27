@@ -26,6 +26,7 @@ class FeedTVCell: UITableViewCell {
     
 	var cellIndex: Int!
 	var cardModel: CardEntity?
+    let cornerRadius: CGFloat = 10
 	
     weak var reloadDelegate: RowReloaderProtocol?
 	
@@ -48,6 +49,9 @@ class FeedTVCell: UITableViewCell {
         
         mainImage.setSuitableImage(from: cardModel)
 
+        containerView.clipsToBounds = true
+        containerView.layer.cornerRadius = cornerRadius
+        
         feedTypeLabel.text = "  " + NSLocalizedString(FeedType(string: cardModel.type ?? "").rawValue, comment: "") + "  "
 		
 		self.cellIndex = cellIndex

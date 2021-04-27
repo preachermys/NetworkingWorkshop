@@ -149,8 +149,6 @@ final class DuelsWorker {
     // MARK: - TableView data
     
     func duelsCount() -> Int {
-        print("count is ")
-        print(duels.count)
         return duels.count
     }
     
